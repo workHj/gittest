@@ -1,0 +1,490 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+/*수강중인 강좌 */
+
+#listbox{
+	padding-top: 40px;
+/*	width: 100%;*/
+	padding-left: 2%;
+/*	outline: 1px solid red;*/
+}
+
+#listbox>span{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#listbox>a{
+	font-size: 11px;
+    font-weight: bold;
+	padding: 5px 10px; 
+	border: solid 1px #d5d5d5;
+	border-radius: 5px;
+	background: #fefefe; /* Old browsers */
+    background: -moz-linear-gradient(top, #fefefe 0%, #eae9e9 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #fefefe 0%,#eae9e9 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #fefefe 0%,#eae9e9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#eae9e9',GradientType=0 ); /* IE6-9 */
+	color: #333333;	
+}
+
+
+#listbox>a:nth-child(2){
+	margin-left: 512px;
+/*	margin-right: 50px;*/
+}
+
+/*전체 노무사 법무사 */
+
+#listbox01{
+	padding-top: 30px;
+	padding-bottom: 15px;
+	margin-left: 20px;
+	font-size: 14px;
+}
+
+#listbox01>a{
+	padding-right: 15px;
+	padding-left: 15px;
+}
+#listbox01>a:nth-child(1){
+	padding-left: 0px;
+}
+
+#listbox01>span{
+	color: #e5e5e5;
+}
+
+#listbox01>a:nth-child(3){
+	font-weight: bold;
+}
+
+#listbox02{
+	width: 910px;
+	padding-top: 15px;
+	margin-left: 20px;
+	font-size: 14px;
+	padding-bottom: 15px;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+#listbox02>a{
+	padding-right: 5px;
+	padding-left: 5px;
+}
+#listbox02>a:nth-child(1){
+	padding-left: 0px;
+	font-weight: bold;
+}
+
+
+/*미션 셀렉트 박스 모임 */
+#listbox03{
+	margin-left: 20px;
+	padding-top: 25px;
+	padding-bottom: 20px;
+	
+}
+
+
+
+/*listbox 03 밑에 select 디자인 */
+.sbHolder{background-color: #fafafa;border: solid 1px #e7e7e7;font-size: 12px;font-weight: normal;height: 20px;position: relative;width: 115px;border-radius: 2px; display: inline-block;}
+.sbSelector{display: block;height: 20px;left: 0;line-height: 20px;outline: none;overflow: hidden;position: absolute;text-indent: 10px;top: 0;}
+/*위 글자 */
+.sbSelector:link, .sbSelector:visited, .sbSelector:hover{outline: none;text-decoration: none;font-size: 12px;}
+.sbToggle{background: url(../img/5-sort-down.png) 18px no-repeat;display: block;height: 20px;outline: none;position: absolute;right: 0;top: 0;width: 30px;}
+.sbToggleOpen{background: url(../img/5-caret-arrow-up.png) 18px no-repeat;}
+/**/
+.sbHolderDisabled{background-color: #3C3C3C;border: solid 1px #515151;}
+.sbHolderDisabled .sbHolder{}
+.sbHolderDisabled .sbToggle{}
+/*밑에 펼쳐지는 칸*/
+.sbOptions{background-color: #fff;border: solid 1px #000000;list-style: none;left: -1px;margin: 0;padding: 0;position: absolute;top: 20px;width:100%;z-index: 6;overflow-y: auto;}
+.sbOptions li{padding: 0px; width: 100%;}
+.sbOptions li:hover{background-color: #ebebeb;}
+/*밑에 펼쳐지는 칸 한칸씩 */
+.sbOptions a{display: block;outline: none;padding: 5px 0 5px 3px;}
+.sbOptions a:link, .sbOptions a:visited{text-decoration: none; padding-left: 10px}
+.sbOptions li.last a{border-bottom: none;}
+
+#selectbox02{
+	
+}
+
+
+/*
+
+#listbox03>select{
+	width: 110px;
+	height: 25px;
+	appearance: none;
+	-webkit-appearance:none;
+	background: url(../img/5-sort-down.png) no-repeat right 5px center;
+	
+	font-size: 12px;
+}
+*/
+
+
+#listbox03>a{
+	font-size: 12px;
+	padding-left: 10px;
+	vertical-align: super;
+}
+
+#listbox03>img{
+	position: relative;
+	top: 0px;
+	left: 0px;
+	z-index: 5;
+	margin-left: -10px;
+	margin-right: -10px;
+	vertical-align: baseline;
+/*	outline: 1px solid red;*/
+}
+
+#listbox03>a:nth-child(10){
+	padding-left: 100px;
+}
+
+#listbox03>a>img{
+	vertical-align: middle;
+	padding-left: 5px;
+}
+
+/*영단기 삭제 리스트 */
+
+#classBox{
+	margin-left: 20px;
+	margin-right: 20px;
+	padding-bottom: 75px;
+}
+
+/*영단기 삭제 첫번쨰 칸 */
+.deleteBox_01,.deleteBox_02,.deleteBox_03,.deleteBox_04,.deleteBox_05 {
+	height: 157px;
+	box-shadow: 1px 1px 2px 1px #d4d4d4; 
+	margin-bottom: 20px;
+	font-size: 12px;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+
+.deleteBox01>img:nth-child(1){
+	padding-left: 25px;
+	padding-top: 15px;
+}
+
+.deleteBox01>p:nth-child(2){
+	padding-left: 25px;
+	padding-top: 10px;
+}
+
+.deleteBox01 p:nth-child(3){
+	padding-left: 25px;
+	font-size: 13px;
+}
+
+.deleteBox01 span:nth-child(5){
+	font-size: 20px;
+}
+
+
+.deleteBox_01>div.deleteBox01>img:nth-child(4), .deleteBox_02>div.deleteBox01>img:nth-child(4){
+	position: absolute;
+	margin-top: 30px;
+}
+
+.deleteBox_01>div.deleteBox01>img:nth-child(5){
+	position: absolute;
+	padding-left: 87px;
+	margin-top: -45px;
+}
+
+.deleteBox_02>div.deleteBox01>img:nth-child(5){
+	position: absolute;
+	padding-left: 87px;
+	margin-top: -47px;
+	width: 110px;
+}
+
+.deleteBox_03>div.deleteBox01>img:nth-child(4){
+	padding-left: 27px;
+	padding-right: 5px;
+	padding-top:20px;
+}
+
+.deleteBox_04>div.deleteBox01>img:nth-child(4){
+	height: 40px;
+	padding-left: 27px;
+	padding-right: 5px;
+	padding-top:15px;
+}
+
+.deleteBox_05>div.deleteBox01>img:nth-child(4){
+	padding-left: 27px;
+	padding-right: 5px;
+	padding-top:20px;
+}
+
+.deleteBox_05>div.deleteBox01>span:nth-child(5){
+	position: absolute;
+	padding-top: 25px;
+	padding-left: 5px;
+}
+
+/*영단기 삭제 두번쨰칸 */
+.deleteBox02{
+	position: relative;
+/*	outline: 1px solid red;*/
+	margin-top: -85px;
+	margin-left: 210px;
+	padding-top: 15px;
+	height: 90%;
+}
+
+.deleteBox_03>div.deleteBox02, .deleteBox_04>div.deleteBox02, .deleteBox_05>div.deleteBox02{
+	margin-top: -135px;
+}
+
+
+.deleteBox_01>div.deleteBox02>p:nth-child(1)>img:nth-child(1){
+	padding-right: 5px;
+}
+
+.deleteBox02>p:nth-child(1){
+	font-size: 16px;
+	width: 395px;
+	
+}
+
+/*수강기간 */
+.deleteBox02>p:nth-child(2){
+	padding-top: 15px;
+	font-size: 12px;
+	width: 385px;
+	color: #999999;
+}
+
+/*강의 수  응시번호 */
+.deleteBox02>div:nth-child(3){
+	padding-top: 10px;
+}
+
+.deleteBox_01>div.deleteBox02>div:nth-child(3){
+	padding-top: 30px;
+}
+
+.deleteBox_03>div.deleteBox02>div:nth-child(3), .deleteBox_04>div.deleteBox02>div:nth-child(3), .deleteBox_05>div.deleteBox02>div:nth-child(3){
+	padding-top: 48px;
+}
+
+/*그래프*/
+.deleteBox_01>div.deleteBox02>div:nth-child(3)>div:nth-child(2), .deleteBox_02>div.deleteBox02>div:nth-child(3)>div:nth-child(2), .deleteBox_03>div.deleteBox02>div:nth-child(3)>div:nth-child(2), .deleteBox_04>div.deleteBox02>div:nth-child(3)>div:nth-child(2){
+	position: absolute;
+	margin-left: 65px;
+	margin-top: -15px!important;
+}
+
+
+/*퍼센트 숫자 */
+.deleteBox_01>div.deleteBox02>div:nth-child(3)>span:nth-child(3) {
+	margin-left: 125px;
+	vertical-align: middle;
+}
+
+.deleteBox_02>div.deleteBox02>div:nth-child(3)>span:nth-child(3),.deleteBox_03>div.deleteBox02>div:nth-child(3)>span:nth-child(3){
+	margin-left: 135px;
+	vertical-align: middle;
+}
+
+.deleteBox_04>div.deleteBox02>div:nth-child(3)>span:nth-child(3){
+	margin-left: 133px;
+	vertical-align: middle;
+}
+
+
+/*워크북 아이콘  교재보기 아이콘 */
+
+.deleteBox02>div:nth-child(3)>img:nth-child(4){
+	vertical-align: middle;
+	padding-right: 4px;	
+	padding-left: 30px;
+}
+.deleteBox02>div:nth-child(3)>img:nth-child(7){
+	height: 13px;
+	vertical-align: middle;
+	padding-right: 4px;	
+}
+
+.deleteBox_05>div:nth-child(2)>div:nth-child(3)>img:nth-child(2){
+	vertical-align: middle;
+	margin-left: 135px;
+}
+
+.deleteBox_05>div:nth-child(2)>div:nth-child(3)>img:nth-child(5){
+	padding-right: 0px;	
+	vertical-align: middle;
+}
+
+/*워크북 교재보기 글씨 */
+.deleteBox_05>div:nth-child(2)>div:nth-child(3)>span:nth-child(3){
+	margin-left: 5px;
+}
+
+.deleteBox_05>div:nth-child(2)>div:nth-child(3)>span:nth-child(6){
+	vertical-align: middle;
+	margin-left: 0px;
+	padding-left: 4px;
+	color: #000000;
+}
+
+.deleteBox02>div:nth-child(3)>span:nth-child(6){
+	padding-left: 10px;
+	padding-right: 5px;
+	color: #d9d9d9;
+}
+
+.deleteBox_05>div:nth-child(2)>div:nth-child(3)>span:nth-child(4){
+	margin-left: 10px;
+	margin-right: 5px;
+	color: #d9d9d9;
+}
+
+
+/*삭제되는 리스트 세번쨰*/
+.deleteBox03{
+	position: relative;
+/*	outline: 1px solid red;*/
+	margin-top: -160px;
+	margin-left: 620px;
+	padding-bottom: 5px;
+}
+
+
+.deleteBox03>img{
+	height: 160px;
+}
+
+
+.deleteBox03>div{
+	position: absolute;
+	margin-left: 25px;
+	margin-right: 25px;
+	padding-bottom: 10px;
+	top: 10px;
+	border-bottom: 1px dotted #cccccc;
+}
+
+.deleteBox03>div>a:nth-child(1){
+	margin-left: 170px;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+.deleteBox_03>div:nth-child(3)>div:nth-child(2)>a:nth-child(1),.deleteBox_04>div:nth-child(3)>div:nth-child(2)>a:nth-child(1),.deleteBox_05>div:nth-child(3)>div:nth-child(2)>a:nth-child(1){
+	margin-left: 150px;
+}
+
+.deleteBox_03>div:nth-child(3)>div:nth-child(2){
+	padding-top: 5px;
+}
+
+#classBox>div:nth-child(5)>div:nth-child(3)>div:nth-child(2){
+	padding-top: 3px;
+}
+
+
+.deleteBox03>div>span:nth-child(2){
+	color: #d2d2d2;
+/*	vertical-align: middle;*/
+}
+/*증명서 */
+.deleteBox03>div>a:nth-child(3)>img{
+	padding-left: 5px;
+	vertical-align: middle;
+}
+.deleteBox03>a:nth-child(3){
+	position: absolute;
+	font-size: 11px;
+    font-weight: bold;
+	padding: 2px 10px;
+	top: 75px;
+	left: 165px;
+	border: solid 1px #d5d5d5;
+	border-radius: 5px;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#e9e8e8));
+    background: -moz-linear-gradient(top,  #fefefe,  #e9e8e8);
+	background: -ms-linear-gradient(top,  #fefefe,  #e9e8e8);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e9e8e8',GradientType=0 ); /* IE6-9 fallback on horizontal gradient */
+	color: #333333;	
+}
+
+
+/*강좌보기 */
+.deleteBox03>a:nth-child(3)>span{
+	padding-right: 30px;
+}
+
+
+/*강좌보기*/
+.deleteBox03>a:nth-child(5){
+	position: absolute;
+	top: 110px;
+	font-size: 15px;
+    font-weight: bold;
+	padding: 8px 77px; 
+	margin-left: 25px;
+	border: none;
+	border-radius: 5px;
+    background: #504f50; /* Old browsers */
+	background: -webkit-gradient(linear, left top, left bottom, from(#504f50), to(#444444));
+    background: -moz-linear-gradient(top,  #504f50,  #444444);
+	background: -ms-linear-gradient(top,  #504f50,  #444444);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#504f50', endColorstr='#444444',GradientType=1 );
+	
+	color: #ffffff;
+	vertical-align: middle;	
+}
+
+.deleteBox03>a:nth-child(5)>img{
+	width: 17px;
+	vertical-align: middle;
+}
+
+#pageNum{
+	margin-top: 60px;
+	text-align: center;
+}
+
+#pageNum>span{
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #888888;
+}
+
+#pageNum>span:first-child {
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#pageNum>span:last-child{
+	
+}
+
+#pageNum>span:nth-child(2){
+	padding-right: 30px;
+	color: #000000;
+}
+
+#pageNum>span:nth-child(13){
+	padding-left: 30px;
+	color: #000000;
+}
+
+

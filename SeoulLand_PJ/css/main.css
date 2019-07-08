@@ -1,0 +1,535 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(core.css);
+@import url(common.css);
+
+
+/*배너 부분-----------------------------------------------------*/
+#banner{
+	position: relative;
+	width: 100%;/*겉박스 100%;*/
+	height: 415px;
+	
+/*	background-color: salmon;*/
+}
+
+/*속박스 중앙*/
+#banner>div{
+	position: relative;
+	width: 990px;
+	height: 100%;
+	margin: 0px auto;/*가로 중앙*/
+	
+/*	background-color: thistle;*/
+}
+
+/*배너 슬라이드 리스트*/
+#slider{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+/*각 슬라이드 리스트*/
+#slider>li{
+	position: absolute;/*display가 inline 인 a태그가 block이 됨*/
+	width: 100%;
+	height: 100%;
+	opacity: 0;/*투명하게*/
+	transition: opacity 0.8s ease-in-out;
+}
+
+/*IR(Image Replacement) - */
+#slider>li>span{
+	display: none;
+}
+
+/*투명도 조절해주는 클래스*/
+.opaView{
+	opacity: 1!important;/* 무조건 적용되도록 */
+	z-index: 1;/*겹쳐진 li 중 보이는 li의 위치를 맨 위로 올림*/
+	cursor: pointer;/*손가락*/
+}
+
+/*배너 이동버튼*/
+.abtn{
+	position: absolute;/*display가 inline 인 a태그가 block이 됨*/
+	top: 50%;
+	transform: translateY(50%);/*세로축 정 중앙*/
+	width: 25px;
+	height: 49px;
+	z-index: 2;
+	
+}
+
+/*IR-alt속성대신 배경이미지 설명넣기*/
+.abtn>span{
+	display: none;
+}
+
+/*버튼에 마우스 오버시 색상이 바뀌는 배경이미지로 배경이미지 위치값을 변경해준다.*/
+.abtn:hover{
+	background-position: 0px -49px;/*Y축 방향 위로 이동*/
+}
+
+/*왼쪽 버튼*/
+.abtnL{
+	left: -30px;
+	background: url(../images/btn_shop_bn_left.png) no-repeat;
+}
+
+/*오른쪽 버튼*/
+.abtnR{
+	right: -30px;
+	background: url(../images/btn_shop_bn_right.png) no-repeat;
+}
+
+/*IR - alt 속성 대신 배경이미지 설명넣기*/
+.abtn>span{
+	display: none;
+}
+
+/*각 li에 배경이미지로 배너 셋팅*/
+#slider>li:nth-child(1){
+	background: url(../images/b01.jpg) no-repeat center;
+}
+#slider>li:nth-child(2){
+	background: url(../images/b02.jpg) no-repeat center;
+}
+#slider>li:nth-child(3){
+	background: url(../images/b03.jpg) no-repeat center;
+}
+#slider>li:nth-child(4){
+	background: url(../images/b04.jpg) no-repeat center;
+}
+#slider>li:nth-child(5){
+	background: url(../images/b05.jpg) no-repeat center;
+}
+#slider>li:nth-child(6){
+	background: url(../images/b06.jpg) no-repeat center;
+}
+#slider>li:nth-child(7){
+	background: url(../images/b07.jpg) no-repeat center;
+}
+#slider>li:nth-child(8){
+	background: url(../images/b08.jpg) no-repeat center;
+}
+#slider>li:nth-child(9){
+	background: url(../images/b09.jpg) no-repeat center;
+}
+#slider>li:nth-child(10){
+	background: url(../images/b10.jpg) no-repeat center;
+}
+#slider>li:nth-child(11){
+	background: url(../images/b11.jpg) no-repeat center;
+}
+
+
+/*블릿박스*/
+.bulletBox{
+	position: absolute;
+	bottom: 15px;
+	right: 190px;
+	z-index: 2;
+}
+.bulletBox img{
+	margin: 0 1px;
+	cursor: pointer;/*손가락*/
+}
+
+/*사이드 배너*/
+#sideban{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	width: 180px;
+	height: 415px;
+	z-index: 2;
+	outline: 1px solid red;
+}
+
+/*반투명 배경 가상요소로 넣기*/
+#sideban::before{
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: #fff;
+	opacity: 0.8;/*반투명*/
+}
+
+#sideban>h1{
+	position: relative;
+	width: 100%;
+	height: 36px;	
+}
+
+#sideban>h1>img:first-child{
+	margin: 15px 45px 0px 10px;
+}
+
+/*사이트 배너리스트 박스*/
+#sbox{
+	position: relative;
+	width: 150px;
+	height: 358px;
+	margin: 0px auto;/*static이나 relative에서 가로 중앙*/
+	overflow: hidden;
+	
+/*	outline: 1px solid lime;*/
+	
+}
+
+#sbox>ul{
+	position: relative;
+	top: 0px;/*기준값 - 이동할 값*/
+}
+
+#sbox>ul>li{
+	width: 100%;
+	height: 92px;
+}
+
+/*사이드 배너 이미지에 테두리*/
+#sbox>ul>li img{
+	outline: 1px solid #999;
+}
+/*사이드 배너 첫번째 이미지에 빨간 테두리*/
+#sbox>ul>li:first-child img{
+	outline: 1px solid #f00;
+}
+
+/*이동버튼 박스*/
+.gobtn{
+	position: relative;
+	display: block;
+	width: 100%;
+	text-align: center;/*텍스트&이미지(화살표 가로 중앙에 옴) - 인라인요소 가로 중앙*/
+	
+}
+
+
+/*컨텐츠 영역 --------------------------------------------------*/
+
+
+/*유일박스 중앙*/
+#cont{
+	position: relative;
+	width: 990px;
+	height: 255px;
+	margin: 0px auto;/*가로 중앙*/
+/*	background-color: lemonchiffon;*/
+}
+
+#cont>ul{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+#cont>ul>li{
+	margin-top: 26px;
+	box-sizing: border-box;
+	
+/*	outline: 1px solid red;*/
+	
+}
+
+/* 운영시간 ---------------------------------------------------------------------------------------------------- */
+.today{
+	width: 180px;
+	height: 199px;
+	padding-left: 10px;
+}
+
+/*타이틀*/
+.today>h1{
+	width: 130px;
+	height: 18px;
+/*	outline: 1px solid red;*/
+}
+
+.today>h1 img{
+	margin-bottom: 5px;
+}
+/*타이틀이미지*/
+.today>h1>img{
+	margin-right: 45px;
+	
+}
+
+/*오늘날짜*/
+.today>div{
+	width: 130px;
+	height: 68px;
+	overflow: hidden;/*부모박스는 자식요소의 margin값을 포함하지 않는다. 따라서 overflow:hidden 설정을 해서 이를 포함시킬 수 있다.*/
+	background: url(../images/bg_1.gif) no-repeat;
+}
+
+.today>div>span{
+	display: block;/*줄바꿈*/
+	text-align: center;
+}
+
+/*날짜 숫자박스*/
+.today>div>span:first-child>em{
+	color: #ff0;
+	font-family: arial;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.today>div>span:first-child{
+	margin-top: 15px;
+	font-family: dotum,"돋움";
+	color: #fff;
+	font-weight: bold;
+	
+}
+
+.today>div>span:last-child{
+	font-family: arial;
+	font-weight: bold;
+	font-size: 17px;
+}
+
+.today>ol{
+	width: 130px;
+	
+}
+
+/* 제휴할인 ---------------------------------------------------------------------------------------------------- */
+.card{
+	width: 220px;
+	height: 199px;
+}
+
+.card>h1{
+	width: 180px;
+	height: 20px;
+	border-bottom: 1px solid #dadada;
+}
+
+.card>h1 img{
+	margin-bottom: 5px;
+}
+
+/*타이틀이미지*/
+.card>h1>img{
+	margin-bottom: 50px;
+}
+
+/*카드 선택박스 공통*/
+.card>select{
+	position: relative;
+	width: 180px;
+	height: 22px;
+	border: 1px solid #cbcbcb;
+	color: #888;
+	font-size: 11px;
+	box-shadow: 1px 1px 6px #ccc inset;/*내부그림자*/
+}
+
+/*카드사선택*/
+#card1{
+	margin: 10px 0px 3px 0px;
+}
+
+.card>h1:last-of-type{/*이름 동일한 자식 요소가 여러개 일때 사용 last-of-type*/
+	position: relative;
+	margin-top: 36px;
+	border-bottom: none;
+}
+
+/*할인쿠폰 배너이미지*/
+.card>img{
+	margin-top: 4px;
+}
+
+/*할인배너버튼*/
+.bN{
+	position: absolute;
+	top: 5px;
+	right: 0px;
+	width: 42px;
+	height: 11px;
+	font-family: arial;
+	font-size: 9px;
+	line-height: 10px;
+	color: #fff;
+}
+
+.bN>li{
+	width: 12px;
+	height: 11px;
+	background: url(../images/ico_num_1.gif) no-repeat;
+	background-position: -12px 0px;
+	text-align: center;
+	margin: 0px 1px;
+	cursor: pointer;
+}
+
+/*배경 빨강*/
+.chgbg{
+	background-position: 0px 0px!important;
+}
+
+/* 뉴스,공지 --------------------------------------------------------------------------------------------------- */
+.news{
+	width: 290px;
+	height: 199px;
+}
+
+.news>h1{
+	width: 250px;
+	height: 20px;
+	border-bottom: 1px solid #dadada;
+}
+
+/*모든 이미지*/
+.news>h1 img{
+	margin-bottom: 5px;
+}
+
+/*타이틀 이미지*/
+.news>h1>img{
+	margin-right: 105px;
+}
+
+/*뉴스 리스트*/
+.news>ol{
+	margin-top: 10px;
+	width: 250px;
+	font-family: dotum,"돋움",sans-serif;
+	font-size: 12px;
+	line-height: 21px;	
+}
+
+.news>ol>li{
+	width: 100%;
+	white-space: nowrap;/*줄바꿈 안함*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.news>ol>li>img{
+	vertical-align: -2px;
+}
+
+.news a {
+	color: #5b5b5b;
+}
+
+.news>div{
+	margin-top: 21px;
+}
+
+/* SNS--------------------------------------------------------------------------------------------------------- */
+/*부모박스*/
+.sns{
+	width: 290px;
+	height: 199px;
+	border: 1px solid #e1e1e1;
+}
+
+/*탭 메뉴*/
+.smenu{
+	position: relative;
+	width: 100%;
+	height: 30px;
+	
+}
+
+/*탭 메뉴 공통*/
+.smenu li{
+	width: 25%;/*4등분*/
+	height: 100%;
+	font-size: 11px;
+	text-align: center;
+	line-height: 30px;
+	background-color: #f0f0f0;
+	box-sizing: border-box;/*크기 유지*/
+	border-bottom: 1px solid #e1e1e1;
+	border-right: 1px solid #e1e1e1;
+}
+
+.smenu li:last-child{
+	border-right: none;/*마지막 탭 오른쪽 테두리 없앰*/
+}
+
+/*탭 메뉴 링크*/
+.smenu li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #9a9a9a;
+}
+
+/*선택된 탭메뉴*/
+.selTab{
+	background-color: #fff!important;/*배경 흰색*/
+	border-bottom: none!important;/*아래 보더 없앰*/
+}
+
+.selTab a{
+	color: #2951a7!important;
+}
+
+/* 탭 메뉴 컨텐츠 --------------------------------------------------------------------------------------------- */
+
+.scont{
+	position: relative;
+	width: 100%;
+	height: 169px;
+}
+
+/*li공통*/
+.scont li{
+	position: absolute;/*컨텐츠들 겹칠 수 있도록*/
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+/*선택된 탭메뉴 컨텐츠*/
+.selCont{
+	display: block!important;
+	
+}
+
+
+
+
+.scont li:nth-child(1){
+	background-color: #e89395;
+}
+.scont li:nth-child(2){
+	background-color: #9e93e8;
+}
+.scont li:nth-child(3){
+	overflow-y: scroll;
+}
+.scont li:nth-child(4){
+	background-color: #52eca7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

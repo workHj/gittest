@@ -1,0 +1,312 @@
+@charset "utf-8";
+/* common.css - GNB및 footer, 레이아웃 공통 디자인 css */
+
+/*로고, GNB메뉴 탑영역-------------------------------------------------*/
+
+/*탑부분 겉박스 100%*/
+#top{
+	position: relative;
+	width: 100%;
+	height: 87px;
+	
+/*	
+	outline: 1px solid red;border 쓰면 값이 밀린다.
+*/
+	z-index: 99;
+}
+
+
+/*탑부분 속박스 - 중앙정렬*/
+#top>div{
+	/*박스크기&위치*/
+	position: relative;
+	width: 990px;
+	height: 100%;
+	margin: 0px auto;/*가로 중앙-static, relative일때 width값 있을 때*/
+
+/*	outline: 1px solid blue;*/
+}
+
+/*로고박스*/
+#top>div>h1{
+	position: absolute;
+	top: 5px;	
+}
+
+/*탑메뉴 박스*/
+#tmenu{
+	position: absolute;
+	top: 10px;
+	right: 40px;
+	
+}
+
+/*탑메뉴 링크*/
+#tmenu a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	font-size: 11px;
+	font-weight: bold;
+	line-height: 19px;
+	letter-spacing: -1px;
+	color: #3a3a3a;
+	padding: 0px 6px;
+}
+
+/*로그인 글자색*/
+.spc{
+	color: #F11218!important;
+}
+
+/*언어 선택 박스*/
+#lang{
+	position: relative;
+	top: -2px;
+	left: 10px;
+	width: 99px;
+	height: 19px;
+	border: 1px solid #cbcbcb;
+	color: #888;
+	font-size: 11px;
+	box-shadow: 1px 1px 6px #ccc inset;/*inset - 내부 그림자*/
+}
+
+/*GNB메뉴 --------------------------------------*/
+
+#gnb{
+	position: absolute;
+	top: 40px;
+	left: 199px;
+/*	width: 100%;*/
+	background-color: #fff;
+	padding-left: 6px;
+	height: 27px;/*최상위 메뉴만 보이는 크기로 변경*/
+	overflow: hidden;
+	transition: height 0.3s ease-in-out;
+}
+
+/*GNB 마우스 오버시 */
+#gnb:hover{
+	height:172px;
+}
+
+/*GNB 100% 배경라인 박스*/
+ .gnbline{
+	position: absolute;
+	top: 87px;
+	width: 100%;/*top의 직계 자식이므로 화면에 꽉참*/
+	height: 0px;/*140*/
+	
+	background-color: #fff;
+	border-bottom: 3px solid #f00;
+	box-shadow: 0px 2px 2px #999;
+}
+
+/*배경라인박스에 배경이미지 넣기*/
+.gnbline::before{
+	content: "";
+	display: block;
+	width: 990px;
+	height: 100%;
+	margin: 0px auto;/*중앙정렬*/
+	background: url(../images/img_gnb_1.gif) no-repeat 0px -9px;
+}
+
+
+/*각메뉴박스*/
+#gnb dl{
+	position: relative;/*부모자격*/
+	width: 128px;
+	height: 172px;
+	border-left: 1px solid #fff;
+}
+
+/*각 메뉴박스에 마우스 오버시 라인색 변경하기*/
+#gnb:hover dl{
+	border-left-color: #ccc;
+}
+
+
+/*각 메뉴박스에 마우스 오버시 글자색 변경하기*/
+#gnb dl:hover dt a {
+	color: #f00;
+}
+
+/*각 메뉴박스에 마우스 오버시 최상위 메뉴 오른쪽에 별 넣기*/
+#gnb dl:hover dt a::after {
+	content: "＊";
+	display: inline-block;
+	position: relative;
+	top: -5px;
+}
+
+/*최상위 메뉴*/
+#gnb dl dt{
+	width: 105px;
+	height: 27px;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 27px;
+	padding-left: 15px;
+	white-space: nowrap;/*자동 줄바꿈X*/
+}
+
+/*캐릭터 쇼핑몰 아이콘 넣기*/
+.icon1::before{
+	content: url(../images/icon_gift.gif);
+	margin-right: 4px;
+	vertical-align: -2px;
+	
+}
+
+/*하위 메뉴*/
+#gnb dl dd{/*dl>dt(0) dl>dd(0) dt>dd(x)*/
+	position: relative;/*빨간 동그라미 부모*/
+	width: 105px;
+	height: 21px;
+	font-size: 11px;
+	font-weight: bold;
+	white-space: nowrap;
+	line-height: 21px;
+	padding-left: 15px;
+}
+
+#gnb dl dd a{
+	color: #999;
+}
+
+
+/*하위 메뉴에 마우스 오버시 글자색 진하게 변함*/
+#gnb dl dd:hover a{
+	color: #333;
+}
+
+/*하위메뉴에 마우스 오버시 앞에 빨간 동그라미 화살표 넣기*/
+#gnb dl dd:hover a::before{
+	content: "＞";
+	display: block;
+	position: absolute;
+	
+	top: 4px;
+	left: -5px;
+	
+	width: 11px;
+	height: 11px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 11px;
+	font-family: arial;
+	font-size: 9px;
+	
+	background-color: red;
+	color: #fff;
+	
+} 
+
+
+/*하단 회사 정보 영역---------------------------------------------*/
+#info{
+	position: relative;
+	width: 100%;
+	height: 130px;
+	
+/*	background-color: palegreen;*/
+}
+
+/*하단 링크 메뉴*/
+#info>aside:first-child{
+	position: relative;
+	width: 100%;
+	height: 36px;	
+	background: url(../images/bg_footer_1.gif) repeat-x;
+	
+/*	background-color: olive;*/
+}
+
+/*하단 링크메뉴 속박스(중앙위치치)*/
+#info>aside:first-child>div{
+	position: relative;
+	width: 990px;
+	height: 100%;
+	margin: 0px auto;
+	
+/*	outline: 1px solid red;*/
+}
+
+.infolink{
+	margin-left: 5px;
+}
+
+/*하단 링크 리스트*/
+.infolink li{
+	font: bold 11px/36px NG,"돋움","san-serif";
+	padding: 0px 3px;
+}
+
+/*점 추가*/
+.infolink li::after{
+	content: "·";
+	font-family: Verdana;
+	font-size: 15px;
+	color: #888;
+	margin: 0px 4px 0px 10px;
+}
+
+/*마지막 점 삭제*/
+.infolink li:last-child::after{
+	opacity: 0;
+}
+
+.infolink li a {
+	color: #888;
+}
+
+/*sns링크 아이콘 박스*/
+.snslink{
+	position: absolute;
+	top: 0px;
+	right: 10px;
+	
+}
+
+/*회사 정보박스*/
+#info>aside:last-child{
+	position: relative;
+	width: 990px;
+	height: 94px;
+	margin: 0px auto;
+/*	background-color: orange;*/
+}
+
+/*회사정보 이미지*/
+#info>aside:last-child>img{
+	margin-top: 20px;
+}
+
+/*패밀리사이트*/
+#fsite{
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	width: 144px;
+	height: 19px;
+	border: 1px solid #cbcbcb;
+	color: #000;
+	font-size: 11px;
+	box-shadow: 1px 1px 6px #ccc inset;/*inset - 내부 그림자*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
